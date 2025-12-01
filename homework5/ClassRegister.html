@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Registration Form</title>
+    <link rel="stylesheet" href="ClassRegister.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Class Registration Form</h2>
+        <p>Please fill out the form below to register for our class</p>
+
+        <form>
+            <div class="row">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+
+            <div class="row">
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+            </div>
+
+            <label for="class-level">Class Level</label>
+            <select id="class-level" required>
+                <option value="">Select your class level</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+            </select>
+            <p class="note">Please choose the appropriate level for your experience</p>
+
+            <label>Class Days</label>
+            <p class="note">Please select the days you are available to attend class</p>
+
+            <div class="checkboxes">
+                <label><input type="checkbox"> Monday</label>
+                <label><input type="checkbox"> Tuesday</label>
+                <label><input type="checkbox"> Wednesday</label>
+                <label><input type="checkbox"> Thursday</label>
+                <label><input type="checkbox"> Friday</label>
+                <label><input type="checkbox"> Saturday</label>
+            </div>
+
+            <div class="terms">
+                <input type="checkbox" id="agree" required>
+                <label for="agree">
+                    I agree to the terms and conditions of the class registration
+                </label>
+            </div>
+
+            <button type="submit">Register Now!</button>
+        </form>
+    </div>
+</body>
+</html>

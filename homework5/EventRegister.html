@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <link rel="stylesheet" href="EventRegister.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Event Registration Form</h2>
+        <p>Please fill out the form below to register for the event.</p>
+
+        <form>
+            <div class="row">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="+1 (555) 123-4567" required>
+
+            <div class="row">
+                <select required>
+                    <option value="">Select Country</option>
+                    <option>Indonesia</option>
+                    <option>Malaysia</option>
+                    <option>Singapore</option>
+                    <option>United States</option>
+                </select>
+                <input type="date" placeholder="MM/DD/YYYY" required>
+            </div>
+
+            <label>T-Shirt Size</label>
+            <div class="checkboxes">
+                <label><input type="checkbox"> Small</label>
+                <label><input type="checkbox"> Medium</label>
+                <label><input type="checkbox"> Large</label>
+                <label><input type="checkbox"> Extra Large</label>
+            </div>
+
+            <h3>Emergency Contact Information</h3>
+            <input type="text" placeholder="Emergency Contact Name" required>
+            <input type="tel" placeholder="+1 (555) 123-4567" required>
+
+            <div class="terms">
+                <input type="checkbox" id="agree" required>
+                <label for="agree">I agree to the terms and conditions of this event.</label>
+            </div>
+
+            <button type="submit">Register Now</button>
+        </form>
+    </div>
+</body>
+</html>
