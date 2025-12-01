@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkulator Sederhana</title>
+</head>
+<body>
+    <h2>Kalkulator Sederhana</h2>
+
+    <input id="angka1" type="number" placeholder="Angka 1">
+    <input id="angka2" type="number" placeholder="Angka 2">
+
+    <button onclick="tambah()">Tambah</button>
+    <button onclick="kurang()">Kurang</button>
+    <button onclick="perkalian()">perkalian</button>
+    <button onclick="pembagian()">pembagian</button>
+
+    <p id="hasil"></p>
+</body>
+<script>
+    function tambah() {
+        let angka1 = parseFloat(document.getElementById("angka1").value);
+        let angka2 = parseFloat(document.getElementById("angka2").value);
+        let hasil = angka1 + angka2;
+        document.getElementById("hasil").innerText = "Hasil: " + hasil;
+    }
+
+    function kurang() {
+        let angka1 = parseFloat(document.getElementById("angka1").value);
+        let angka2 = parseFloat(document.getElementById("angka2").value);
+        let hasil = angka1 - angka2;
+        document.getElementById("hasil").innerText = "Hasil: " + hasil;
+    }
+    function perkalian() {
+        let angka1 = parseFloat(document.getElementById("angka1").value);
+        let angka2 = parseFloat(document.getElementById("angka2").value);
+        let hasil = angka1 * angka2;
+        document.getElementById("hasil").innerText = "Hasil: " + hasil;
+    }
+    function pembagian() {
+        let angka1 = parseFloat(document.getElementById("angka1").value);
+        let angka2 = parseFloat(document.getElementById("angka2").value);
+        let hasil = angka1 / angka2;
+        document.getElementById("hasil").innerText = "Hasil: " + hasil;
+    }
+</script>
+</html>
