@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Biodata Dinamis - Tugas 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+
+        .container {
+            width: 350px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 100px;
+            display: block;
+            margin: auto;
+        }
+
+        button {
+            margin: 5px 0;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 style="text-align:center;">Biodata Mahasiswa</h2>
+
+    <img id="foto" src="jpg1.jpg" alt="Foto Profil">
+
+    <p><b>Nama:</b> <span id="nama">Fanny</span></p>
+    <p><b>NIM:</b> <span id="nim">0110125010</span></p>
+    <p><b>Program Studi:</b> <span id="prodi">Sistem Informasi</span></p>
+
+    <hr>
+
+    <button onclick="ubahNama()">Ubah Nama</button>
+    <button onclick="ubahProdi()">Ubah Program Studi</button>
+    <button onclick="gantiFoto()">Ganti Foto</button>
+    <button onclick="sembunyikan()">Sembunyikan Biodata</button>
+    <button onclick="tampilkan()">Tampilkan Biodata</button>
+</div>
+
+<script>
+    function ubahNama() {
+        let namaBaru = prompt("Masukkan nama baru:");
+        if (namaBaru) {
+            document.getElementById("nama").innerHTML = namaBaru;
+        }
+    }
+
+    function ubahProdi() {
+        let prodiBaru = prompt("Masukkan program studi baru:");
+        if (prodiBaru) {
+            document.getElementById("prodi").innerHTML = prodiBaru;
+        }
+    }
+
+    function gantiFoto() {
+        let urlFoto = prompt("Masukkan URL foto baru:");
+        if (urlFoto) {
+            document.getElementById("foto").setAttribute("src", urlFoto);
+        }
+    }
+
+    function sembunyikan() {
+        document.querySelector(".container").style.display = "none";
+    }
+
+    function tampilkan() {
+        document.querySelector(".container").style.display = "block";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas 5 - jQuery Chaining</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #notif {
+            width: 300px;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 10px;
+            background: #ddd;
+            display: none;
+        }
+
+        button {
+            padding: 8px 20px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Tugas 5 – jQuery Method Chaining + Suara Lucu</h2>
+
+    <button id="showNotif">Tampilkan Notifikasi</button>
+
+    <div id="notif">
+        Ini adalah notifikasi chaining!
+    </div>
+
+    <!-- Suara lucu -->
+    <audio id="funnySound" src="funny-boing-flexatone-wobble-352710 (2).mp3.crdownload"></audio>
+
+    <script>
+        $("#showNotif").click(function () {
+
+            // mainkan suara lucu
+            $("#funnySound")[0].play();
+
+            $("#notif")
+                .css("background", "#ffeb3b")
+                .fadeIn(500)
+                .slideDown(500)
+                .delay(3000)
+                .slideUp(500)
+                .fadeOut(500);
+        });
+    </script>
+
+</body>
+</html>

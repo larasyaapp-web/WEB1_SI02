@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ Interaktif jQuery</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>FAQ Interaktif (jQuery)</h2>
+
+<div class="question">1. Apa itu CSS?</div>
+<div class="answer">CSS digunakan untuk memperindah tampilan halaman web.</div>
+
+<div class="question">2. Apa itu HTML?</div>
+<div class="answer">HyperText Markup Language adalah bahasa standar yang digunakan untuk membuat struktur dan konten halaman web.</div>
+
+<div class="question">3. Apa itu JavaScript?</div>
+<div class="answer">JavaScript adalah bahasa untuk membuat halaman web interaktif.</div>
+
+<div class="question">4. Apa itu jQuery?</div>
+<div class="answer">jQuery adalah library JavaScript untuk mempermudah manipulasi DOM.</div>
+
+<div class="question">5. Apa itu Streamlit?</div>
+<div class="answer">Streamlit adalah framework sumber terbuka berbasis python yang memudahkan untuk membuat aplikasi web interaktif dengan cepat hanya menulis kode python.</div>
+
+<script>
+    // Semua jawaban disembunyikan di awal
+    $(".answer").hide();
+
+    // Klik → tampil/sembunyikan jawaban
+    $(".question").click(function() {
+        $(this).next(".answer").toggle();
+    });
+
+    // Hover → warna biru, keluar → kembali hitam
+    $(".question").hover(
+        function() {
+            $(this).css("color", "blue");
+        },
+        function() {
+            $(this).css("color", "black");
+        }
+    );
+</script>
+
+</body>
+</html>
